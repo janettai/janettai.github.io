@@ -10,9 +10,41 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = "https://janettai.github.io";
+
 export const metadata: Metadata = {
-  title: "Janett Labs",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Janett Labs",
+    template: "%s | Janett Labs",
+  },
   description: "A Manifesto for the Science of Learning",
+  openGraph: {
+    title: "Janett Labs",
+    description: "A Manifesto for the Science of Learning",
+    url: SITE_URL,
+    siteName: "Janett Labs",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Janett Labs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Janett Labs",
+    description: "A Manifesto for the Science of Learning",
+    images: ["/og-default.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

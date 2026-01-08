@@ -10,6 +10,7 @@ export interface PostMetadata {
   date: string;
   excerpt: string;
   author?: string;
+  image?: string;
 }
 
 export interface Post extends PostMetadata {
@@ -36,6 +37,7 @@ export function getAllPosts(): PostMetadata[] {
         date: data.date || "",
         excerpt: data.excerpt || "",
         author: data.author,
+        image: data.image,
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -59,6 +61,7 @@ export function getPostBySlug(slug: string): Post | null {
     date: data.date || "",
     excerpt: data.excerpt || "",
     author: data.author,
+    image: data.image,
     content,
   };
 }
