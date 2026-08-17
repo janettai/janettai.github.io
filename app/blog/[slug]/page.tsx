@@ -21,14 +21,14 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!post) {
     return {
-      title: "Post Not Found | Janett Labs",
+      title: "Post Not Found",
     };
   }
 
   const ogImage = post.image || "/og-default.png";
 
   return {
-    title: `${post.title} | Janett Labs`,
+    title: post.title,
     description: post.excerpt,
     authors: post.author ? [{ name: post.author }] : undefined,
     openGraph: {

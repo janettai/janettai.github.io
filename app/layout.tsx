@@ -12,16 +12,19 @@ const inter = Inter({
 
 const SITE_URL = "https://janettai.github.io";
 
+const SITE_DESCRIPTION =
+  "A research lab studying how software changes what is possible in learning and teaching.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Janett Labs",
     template: "%s | Janett Labs",
   },
-  description: "A Manifesto for the Science of Learning",
+  description: SITE_DESCRIPTION,
   openGraph: {
     title: "Janett Labs",
-    description: "A Manifesto for the Science of Learning",
+    description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: "Janett Labs",
     locale: "en_US",
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Janett Labs",
-    description: "A Manifesto for the Science of Learning",
+    description: SITE_DESCRIPTION,
     images: ["/og-default.png"],
   },
   robots: {

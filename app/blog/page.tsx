@@ -2,8 +2,9 @@ import Link from "next/link";
 import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata = {
-  title: "Blog | Janett Labs",
-  description: "Writings on the science of learning",
+  title: "Blog",
+  description:
+    "Notes from the lab on learning, teaching, and the software in between",
 };
 
 export default function BlogPage() {
@@ -14,7 +15,7 @@ export default function BlogPage() {
       <section className="mb-12">
         <h1 className="text-2xl font-semibold mb-2">Blog</h1>
         <p className="text-[var(--color-text-muted)]">
-          Writings on the science of learning
+          Notes from the lab on learning, teaching, and the software in between
         </p>
       </section>
 
